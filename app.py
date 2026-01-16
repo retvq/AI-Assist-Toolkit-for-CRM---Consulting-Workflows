@@ -497,25 +497,30 @@ st.markdown("""
         background-color: transparent !important;
     }
     
-    /* Hamburger menu icon / sidebar toggle - DARK BLUE for visibility */
+    /* Hamburger menu icon / sidebar toggle - ALWAYS VISIBLE for mobile */
     [data-testid="stSidebarCollapsedControl"] button,
     [data-testid="stSidebarCollapseButton"] button,
     [data-testid="collapsedControl"] button,
     button[kind="header"],
     [data-testid="stSidebar"] button[kind="header"] {
         color: #1a365d !important;
-        background-color: rgba(26, 54, 93, 0.1) !important;
+        background-color: #e2e8f0 !important;
+        border: 1px solid #cbd5e0 !important;
+        border-radius: 8px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
     }
     
     [data-testid="stSidebarCollapsedControl"] button:hover,
     [data-testid="stSidebarCollapseButton"] button:hover {
-        background-color: rgba(26, 54, 93, 0.2) !important;
+        background-color: #cbd5e0 !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
     }
     
     /* Sidebar collapse button (X button) */
     [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"],
     [data-testid="stSidebar"] button[aria-label="Close sidebar"] {
         color: #1a365d !important;
+        background-color: #e2e8f0 !important;
     }
     
     /* All header area buttons */
