@@ -150,7 +150,23 @@ st.markdown("""
         font-weight: 600;
     }
     
-    /* Section headers */
+    /* All headings - ensure visibility in light theme */
+    h1, h2, h3, h4, h5, h6,
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3, 
+    .stMarkdown h4, .stMarkdown h5, .stMarkdown h6 {
+        color: #1a1a1a !important;
+    }
+    
+    h1 {
+        color: #00838f !important;
+        font-weight: 700;
+    }
+    
+    h2 {
+        color: #00838f !important;
+        font-weight: 600;
+    }
+    
     h3 {
         color: #00838f !important;
         font-weight: 600;
@@ -162,6 +178,11 @@ st.markdown("""
         font-weight: 500;
         border-bottom: 2px solid rgba(0, 131, 143, 0.2);
         padding-bottom: 0.5rem;
+    }
+    
+    h5, h6 {
+        color: #1a1a1a !important;
+        font-weight: 500;
     }
     
     /* Primary button - teal theme */
@@ -394,12 +415,17 @@ st.markdown("""
     
     [data-testid="stSidebar"] .stRadio label {
         background: rgba(0, 131, 143, 0.03) !important;
-        border: 1px solid rgba(0, 131, 143, 0.1) !important;
+        border: 1px solid rgba(0, 131, 143, 0.15) !important;
         border-radius: 8px !important;
         padding: 12px 16px !important;
         margin: 4px 0 !important;
         cursor: pointer;
         transition: all 0.2s ease;
+    }
+    
+    [data-testid="stSidebar"] .stRadio label span,
+    [data-testid="stSidebar"] .stRadio label p,
+    [data-testid="stSidebar"] .stRadio label div {
         color: #1a1a1a !important;
     }
     
@@ -408,16 +434,15 @@ st.markdown("""
         border-color: rgba(0, 131, 143, 0.3) !important;
     }
     
-    [data-testid="stSidebar"] .stRadio label[data-checked="true"],
-    [data-testid="stSidebar"] .stRadio div[data-checked="true"] label {
-        background: rgba(0, 131, 143, 0.15) !important;
-        border-color: #00838f !important;
+    [data-testid="stSidebar"] .stRadio label[data-checked="true"] span,
+    [data-testid="stSidebar"] .stRadio label[data-checked="true"] p,
+    [data-testid="stSidebar"] .stRadio label[data-checked="true"] div {
         color: #00838f !important;
     }
     
-    /* Hide radio circle */
-    [data-testid="stSidebar"] .stRadio [role="radiogroup"] > label > div:first-child {
-        display: none;
+    [data-testid="stSidebar"] .stRadio label[data-checked="true"] {
+        background: rgba(0, 131, 143, 0.12) !important;
+        border-color: #00838f !important;
     }
 </style>
 """, unsafe_allow_html=True)
