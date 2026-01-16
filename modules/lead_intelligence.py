@@ -21,26 +21,27 @@ CRITICAL RULES:
 3. If information is missing or unclear, explicitly state uncertainty
 4. Format output for CRM compatibility
 5. Be concise and professional
+6. Do NOT use any emojis in your output
 
 OUTPUT FORMAT (use exactly this structure):
-## 📋 Business Summary
+## Business Summary
 [2-3 sentence summary of the lead/opportunity]
 
-## 🎯 Explicit Pain Points (Observed)
+## Explicit Pain Points (Observed)
 [List ONLY pain points directly mentioned in the input, quote when possible]
 - "..." 
 - "..."
 
-## 💡 Inferred Client Intent
+## Inferred Client Intent
 [Your interpretations based on context - clearly label these as inferences]
 - [Inference]: [Your reasoning]
 
-## 📌 Suggested Next Actions
+## Suggested Next Actions
 [Actionable recommendations based on the analysis]
 - Action 1
 - Action 2
 
-## ⚠️ Uncertainty / Missing Information
+## Uncertainty / Missing Information
 [What couldn't be determined from the input]
 - Missing: [item]
 - Unclear: [item]
@@ -95,6 +96,7 @@ Remember:
 - Quote directly from input when citing pain points
 - Be explicit about what's uncertain or missing
 - Keep the summary CRM-ready and professional
+- Do NOT use any emojis
 """
 
     # Generate response

@@ -8,7 +8,7 @@ from datetime import datetime
 def format_draft_header() -> str:
     """Generate the standard draft header warning."""
     return """
-⚠️ **DRAFT – REQUIRES HUMAN REVIEW**
+**DRAFT - REQUIRES HUMAN REVIEW**
 
 _This output is AI-generated and should be verified before use._
 
@@ -24,37 +24,37 @@ def format_confidence_indicator(level: str) -> str:
         level: One of 'high', 'medium', 'low', 'uncertain'
     """
     indicators = {
-        "high": "🟢 **High Confidence**",
-        "medium": "🟡 **Medium Confidence**",
-        "low": "🟠 **Low Confidence**",
-        "uncertain": "🔴 **Uncertain**"
+        "high": "[HIGH CONFIDENCE]",
+        "medium": "[MEDIUM CONFIDENCE]",
+        "low": "[LOW CONFIDENCE]",
+        "uncertain": "[UNCERTAIN]"
     }
-    return indicators.get(level.lower(), "⚪ **Unknown**")
+    return indicators.get(level.lower(), "[UNKNOWN]")
 
 
-def format_section_header(title: str, icon: str = "📋") -> str:
-    """Format a section header with icon."""
-    return f"\n### {icon} {title}\n"
+def format_section_header(title: str, icon: str = "") -> str:
+    """Format a section header."""
+    return f"\n### {title}\n"
 
 
 def format_observed_fact(fact: str) -> str:
     """Format a fact that was directly observed in the input."""
-    return f"✓ _{fact}_"
+    return f"- _{fact}_"
 
 
 def format_inference(inference: str) -> str:
     """Format an AI inference with clear labeling."""
-    return f"💡 **[Inferred]** {inference}"
+    return f"- **[Inferred]** {inference}"
 
 
 def format_uncertainty(item: str) -> str:
     """Format an uncertain or missing item."""
-    return f"❓ {item}"
+    return f"- ? {item}"
 
 
 def format_action_item(action: str) -> str:
     """Format a suggested action item."""
-    return f"→ {action}"
+    return f"- {action}"
 
 
 def format_data_quality_issue(
@@ -74,16 +74,16 @@ def format_data_quality_issue(
         affected_count: Number of affected records
         total_count: Total number of records
     """
-    severity_icons = {
-        "critical": "🔴",
-        "warning": "🟠",
-        "info": "🔵"
+    severity_labels = {
+        "critical": "[CRITICAL]",
+        "warning": "[WARNING]",
+        "info": "[INFO]"
     }
-    icon = severity_icons.get(severity.lower(), "⚪")
+    label = severity_labels.get(severity.lower(), "[UNKNOWN]")
     percentage = (affected_count / total_count * 100) if total_count > 0 else 0
     
     return f"""
-{icon} **{category}**
+{label} **{category}**
 - {description}
 - Affected: {affected_count} records ({percentage:.1f}%)
 """
@@ -96,7 +96,7 @@ def format_user_story(
     acceptance_criteria: List[str]
 ) -> str:
     """Format a user story with acceptance criteria."""
-    criteria_formatted = "\n".join([f"  ✓ {c}" for c in acceptance_criteria])
+    criteria_formatted = "\n".join([f"  - {c}" for c in acceptance_criteria])
     return f"""
 **As a** {stakeholder}
 **I want** {goal}
@@ -116,10 +116,10 @@ def format_task_breakdown(tasks: List[Dict]) -> str:
     """
     output = []
     for i, task in enumerate(tasks, 1):
-        output.append(f"☐ **Task {i}:** {task.get('title', 'Untitled')}")
+        output.append(f"- [ ] **Task {i}:** {task.get('title', 'Untitled')}")
         subtasks = task.get('subtasks', [])
         for subtask in subtasks:
-            output.append(f"    └ {subtask}")
+            output.append(f"    - [ ] {subtask}")
     return "\n".join(output)
 
 
@@ -140,5 +140,5 @@ def format_data_readonly_notice() -> str:
     """Notice that data was not modified."""
     return """
 ---
-⚠️ **READ-ONLY ANALYSIS** - No data was modified or stored.
+**READ-ONLY ANALYSIS** - No data was modified or stored.
 """

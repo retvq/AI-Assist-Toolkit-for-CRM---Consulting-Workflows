@@ -168,7 +168,7 @@ def format_issues_report(issues: List[Dict], total_records: int) -> str:
     """Format the deterministic issues into a readable report."""
     if not issues:
         return """
-### ✅ No Issues Detected
+### No Issues Detected
 
 All deterministic checks passed. The data appears to be well-formatted.
 """
@@ -179,32 +179,32 @@ All deterministic checks passed. The data appears to be well-formatted.
     info = [i for i in issues if i['severity'] == 'info']
     
     output = f"""
-### 📊 Data Quality Summary
+### Data Quality Summary
 
 - **Total Records Analyzed:** {total_records}
 - **Issues Found:** {len(issues)}
-  - 🔴 Critical: {len(critical)}
-  - 🟠 Warning: {len(warnings)}
-  - 🔵 Info: {len(info)}
+  - Critical: {len(critical)}
+  - Warning: {len(warnings)}
+  - Info: {len(info)}
 
 ---
 
 """
     
     if critical:
-        output += "### 🔴 Critical Issues\n\n"
+        output += "### Critical Issues\n\n"
         for issue in critical:
             output += f"**{issue['type'].replace('_', ' ').title()}** - {issue['column']}\n"
             output += f"- {issue['description']}\n\n"
     
     if warnings:
-        output += "### 🟠 Warnings\n\n"
+        output += "### Warnings\n\n"
         for issue in warnings:
             output += f"**{issue['type'].replace('_', ' ').title()}** - {issue['column']}\n"
             output += f"- {issue['description']}\n\n"
     
     if info:
-        output += "### 🔵 Informational\n\n"
+        output += "### Informational\n\n"
         for issue in info:
             output += f"**{issue['type'].replace('_', ' ').title()}** - {issue['column']}\n"
             output += f"- {issue['description']}\n\n"
@@ -223,6 +223,7 @@ Keep your response:
 - Business-focused (not technical jargon)
 - Concise but comprehensive
 - Actionable
+- Do NOT use any emojis
 
 CRITICAL: You are ONLY explaining and advising. You are NOT modifying any data.
 """
@@ -250,6 +251,8 @@ Provide:
 1. Business impact explanation for each issue type
 2. Downstream risks if not addressed
 3. Recommended cleanup priority order
+
+Do NOT use any emojis in your response.
 """
 
     result = llm.generate(
@@ -263,7 +266,7 @@ Provide:
         return f"""
 ---
 
-### 💡 AI Analysis: Why These Issues Matter
+### AI Analysis: Why These Issues Matter
 
 {result["content"]}
 """
@@ -304,7 +307,7 @@ def process_data_quality_check(df: pd.DataFrame) -> Dict:
     
     # Format deterministic report
     report = f"""
-## 📊 CRM Data Quality & Readiness Report
+## CRM Data Quality & Readiness Report
 
 **File Summary:**
 - Rows: {metadata['rows']}
