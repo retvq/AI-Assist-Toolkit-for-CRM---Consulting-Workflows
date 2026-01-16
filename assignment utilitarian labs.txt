@@ -1,0 +1,289 @@
+Assignment
+AI Assist Toolkit for CRM & Consulting Workflows
+Realistic Demo Implementation
+1. OBJECTIVE
+
+Design and build a demo-grade, production-aligned AI assistant that supports consultants across three CRM-centric workflows:
+
+Understanding leads quickly
+
+Translating client conversations into execution-ready drafts
+
+Detecting CRM data quality risks before automation
+
+This system is assistive, not autonomous.
+
+The goal is to demonstrate judgment, reliability, and workflow fit, not full enterprise scale.
+
+2. SYSTEM SCOPE (STRICT)
+In Scope
+
+Single unified interface
+
+Three clearly separated modules
+
+Session-based processing only
+
+Deterministic logic where applicable
+
+AI used only for summarization and explanation
+
+Human-in-the-loop by design
+
+Out of Scope (Explicit Limits)
+
+No real CRM integrations
+
+No persistent storage
+
+No background jobs or async pipelines
+
+No user authentication
+
+No role-based access control
+
+No performance benchmarking
+
+No autonomous decisions or execution
+
+Any feature outside this scope is not required and not expected.
+
+3. SYSTEM OVERVIEW (END-TO-END FLOW)
+
+User selects a module on the main interface
+
+User provides input relevant to that module
+
+System validates input quality
+
+Deterministic checks run first (where applicable)
+
+AI processes only validated input
+
+Output is generated as a draft
+
+System explicitly highlights:
+
+Observed facts
+
+Inferred insights
+
+Uncertainty or missing information
+
+User reviews, edits, or discards output
+
+At no point does the system act without user review.
+
+4. USER INTERFACE REQUIREMENTS (MANDATORY)
+Primary Interface
+
+Single page
+
+Three fixed sections, always visible or easily switchable:
+
+Lead / Opportunity Intelligence
+
+Requirement to Delivery Translation
+
+CRM Data Quality & Readiness Check
+
+UI Principles
+
+Task-oriented, not exploratory
+
+Minimal configuration
+
+Clear input → output mapping
+
+Outputs presented as review-friendly blocks
+
+No AI output presented as final or authoritative
+
+5. MODULE 1: LEAD / OPPORTUNITY INTELLIGENCE
+Purpose
+
+Reduce time spent understanding messy lead information.
+
+Inputs
+
+Free-text lead notes
+
+Email threads
+
+Call summaries or transcripts
+
+Inputs may be incomplete or poorly structured.
+
+System Behavior
+
+The system must produce:
+
+Business summary
+
+Explicit pain points (observed)
+
+Inferred client intent (clearly labeled as inferred)
+
+Suggested next actions
+
+Output Constraints
+
+Structured sections
+
+CRM-ready formatting
+
+Clear separation between facts and inference
+
+Failure Handling
+
+If input is insufficient:
+
+System must state uncertainty
+
+Must not fabricate details
+
+Must request clarification explicitly
+
+6. MODULE 2: REQUIREMENT TO DELIVERY TRANSLATION
+Purpose
+
+Convert client discussions into execution-ready drafts.
+
+Inputs
+
+Discovery notes
+
+Informal requirement descriptions
+
+Client messages
+
+System Behavior
+
+The system must generate:
+
+Draft user stories (stakeholder perspective)
+
+Plain-language acceptance criteria
+
+Logical task breakdown
+
+Explicit Restrictions
+
+The system must NOT:
+
+Estimate timelines
+
+Assign ownership
+
+Propose architecture
+
+Make delivery commitments
+
+Human-in-the-Loop Requirement
+
+All outputs must be labeled clearly as:
+“Draft – Requires Human Review”
+
+7. MODULE 3: CRM DATA QUALITY & READINESS CHECK
+Purpose
+
+Identify data issues that could break automation or analytics.
+
+Inputs
+
+Tabular CRM data (CSV or equivalent)
+
+Deterministic Checks (Mandatory)
+
+Missing critical fields
+
+Duplicate records
+
+Format inconsistencies
+
+Basic anomalies (e.g., invalid values)
+
+AI-Assisted Role (Limited)
+
+AI may only:
+
+Explain why issues matter
+
+Describe downstream risks
+
+Suggest cleanup priorities
+
+AI must NOT modify data or make destructive changes.
+
+8. CROSS-MODULE REQUIREMENTS
+Consistency
+
+Unified terminology
+
+Consistent output structure
+
+Shared confidence and uncertainty indicators
+
+Explainability
+
+Every AI output must include:
+
+What was observed
+
+What was inferred
+
+What is uncertain
+
+Reliability
+
+Clear error messages
+
+Graceful handling of bad input
+
+No silent failures
+
+9. SECURITY & PRIVACY ASSUMPTIONS
+
+All data is sensitive
+
+No data is stored beyond the active session
+
+No training or reuse of user data
+
+AI processing can be conceptually disabled per organization
+
+Implementation may simulate these controls.
+
+10. DELIVERY EXPECTATIONS
+
+The submission must include:
+
+Working demo application
+
+Clear system flow documentation
+
+Explicit scope and non-goals
+
+Explanation of design tradeoffs
+
+Notes on how the system could be extended to production
+
+11. SUCCESS CRITERIA
+
+The system is successful if:
+
+A consultant can use it during a real engagement
+
+Outputs are trusted as drafts, not decisions
+
+Data risks are surfaced before failures occur
+
+The system feels reliable, conservative, and professional
+
+FINAL EVALUATION QUESTION
+
+For every design decision, answer:
+
+“Would a consulting firm trust this as an internal assistant in front of a client?”
+
+If not, the design is incorrect.

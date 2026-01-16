@@ -1,0 +1,35 @@
+Email Thread - Lead: TechStart Solutions
+
+From: Sarah Chen <sarah@techstart.io>
+To: sales@ourcompany.com
+Subject: RE: Your CRM Platform Demo Request
+
+Hi,
+
+Thanks for reaching out. We're currently using Salesforce but honestly it's been a nightmare for our team of 25 sales reps. The main issues:
+
+1. Data entry takes forever - reps spend 2+ hours daily just logging calls
+2. Our reports are always wrong because nobody updates opportunities properly
+3. We tried Salesforce automation but it broke more things than it fixed
+4. Management wants real-time pipeline visibility but we can only do weekly exports
+
+We're growing fast (just closed Series B - $15M) and need something that actually works with our workflow, not against it. Our sales cycle is typically 3-6 months for enterprise deals.
+
+Budget isn't the main concern - we just need something that our team will actually use. Previous tools failed because of poor adoption.
+
+Can we schedule a demo for next Tuesday or Wednesday? I'll bring our VP of Sales and our RevOps lead.
+
+Best,
+Sarah Chen
+Head of Sales Operations
+TechStart Solutions
+
+---
+
+Call Notes (Internal):
+- Sarah seemed frustrated with current solution
+- Mentioned they've looked at HubSpot and Pipedrive but worried about migration
+- VP of Sales is the decision maker, Sarah influences
+- They have a dedicated RevOps person which is unusual for their size
+- Timeline: Want to make decision by end of Q1
+- Current contract with SF ends in 4 months

@@ -1,0 +1,36 @@
+Discovery Call Notes - Client: GreenLeaf Organics
+
+Meeting Date: Last Thursday
+Attendees: Maria (CEO), James (Operations Manager), Us
+
+Context:
+GreenLeaf is a mid-size organic food distributor. They supply to ~200 restaurants and grocery stores in the metro area. Currently everything is manual - orders come in via phone, email, and sometimes text messages.
+
+What they said they need:
+
+Maria: "We're losing orders because things fall through the cracks. Last month we missed a $5,000 order from our biggest client because the email got buried. I need to see all orders in one place."
+
+James: "The drivers don't know their routes until the morning. They come in, I hand them paper sheets, and they figure it out. It's chaos. We need something on their phones."
+
+Maria: "I want to know in real-time where my trucks are. When a restaurant calls asking where their delivery is, I have to call the driver. It's embarrassing."
+
+James: "Also inventory - we're always either overstocked on greens or running out. Can't it predict what we need?"
+
+Maria: "Oh, and invoicing. We still mail paper invoices. It's 2024. Some clients have been asking for online payment."
+
+Current pain points:
+- Missed orders due to scattered communication channels
+- No route optimization for 12 delivery trucks
+- Manual inventory tracking in Excel
+- Paper-based invoicing, slow payment collection
+- No visibility into delivery status
+
+Their priorities (in order per Maria):
+1. Order management - consolidate everything
+2. Driver mobile app with routes
+3. Real-time tracking
+4. "The other stuff can come later"
+
+Budget: "We're not a tech company, so nothing crazy. But we know we need to invest to grow."
+
+Timeline hint: Want to start pilot before summer busy season (3 months away)

@@ -1,0 +1,16 @@
+Lead_ID,Company_Name,Contact_Name,Email,Phone,Industry,Deal_Amount,Stage,Last_Contact,Source
+1,Acme Corp,John Smith,john@acme.com,555-123-4567,Technology,50000,Qualified,2024-01-15,Website
+2,TechStart Inc,Sarah Johnson,sarah@techstart,555-234-5678,Technology,75000,Proposal,2024-01-10,Referral
+3,Global Foods,Mike Brown,mike@globalfoods.com,(555) 345-6789,Food & Beverage,30000,Negotiation,2024-01-12,Trade Show
+4,Acme Corp,John Smith,john@acme.com,555-123-4567,Technology,50000,Qualified,2024-01-15,Website
+5,DataDriven LLC,,contact@datadriven.com,5554567890,Analytics,45000,Discovery,2024-01-08,Cold Call
+6,Fast Logistics,Tom Wilson,tom@fastlog.com,555.567.8901,Logistics,-25000,Qualified,2024-01-14,Website
+7,Smart Solutions,Amy Chen,amychen@smart.com,555-678-9012,Consulting,60000,Proposal,01/16/2024,Referral
+8,,,invalid-email,not-a-phone,Unknown,0,Lead,2024-01-05,Other
+9,CloudFirst,David Lee,david@cloudfirst.com,555-789-0123,Technology,80000,Closed Won,2024-01-11,Website
+10,NextGen AI,Lisa Park,lisa@nextgenai.com,555-890-1234,AI/ML,120000,Proposal,,Referral
+11,BuildRight,Construction Bob,bob@buildright.com,555-901-2345,Construction,35000,Qualified,2024-01-13,Trade Show
+12,MediCare Plus,Dr. Nancy Adams,nancy@medicareplus.com,555-012-3456,Healthcare,90000,Discovery,2024-01-09,Cold Call
+13,FinServ Global,Robert Chen,rchen@finserv.com,555-111-2222,Finance,150000,Negotiation,2024-01-07,Referral
+14,EcoGreen Ltd,Emma Wilson,emma@ecogreen.com,5551112223,Sustainability,25000,Lead,2024-01-16,Website
+15,TechStart Inc,Sarah Johnson,SARAH@TECHSTART.COM,555-234-5678,Technology,75000,Closed Lost,2024-01-10,Referral
