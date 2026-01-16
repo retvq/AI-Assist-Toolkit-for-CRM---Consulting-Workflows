@@ -1,26 +1,58 @@
 """
 Groq LLM Client - Wrapper for Llama 3.3 70B API calls
+Supports both local .env and Streamlit Cloud secrets
 """
 import os
 from typing import Optional
-from groq import Groq
-from dotenv import load_dotenv
 
-load_dotenv()
+try:
+    import streamlit as st
+    HAS_STREAMLIT = True
+except ImportError:
+    HAS_STREAMLIT = False
+
+try:
+    from groq import Groq
+    HAS_GROQ = True
+except ImportError:
+    HAS_GROQ = False
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
+
+def get_api_key() -> Optional[str]:
+    """
+    Get GROQ_API_KEY from Streamlit secrets or environment variables.
+    Priority: st.secrets > os.environ
+    """
+    # Try Streamlit secrets first (for Streamlit Cloud)
+    if HAS_STREAMLIT:
+        try:
+            if hasattr(st, 'secrets') and 'GROQ_API_KEY' in st.secrets:
+                return st.secrets['GROQ_API_KEY']
+        except Exception:
+            pass
+    
+    # Fall back to environment variable (for local development)
+    return os.environ.get('GROQ_API_KEY')
 
 
 class LLMClient:
     """Wrapper for Groq API with Llama 3.3 70B model."""
     
     def __init__(self):
-        self.api_key = os.getenv("GROQ_API_KEY")
+        self.api_key = get_api_key()
         self.client = None
         self.model = "llama-3.3-70b-versatile"
         self._initialize_client()
     
     def _initialize_client(self):
         """Initialize the Groq client if API key is available."""
-        if self.api_key:
+        if self.api_key and HAS_GROQ:
             try:
                 self.client = Groq(api_key=self.api_key)
             except Exception as e:
@@ -54,7 +86,7 @@ class LLMClient:
             return {
                 "success": False,
                 "content": None,
-                "error": "LLM client not configured. Please set GROQ_API_KEY in .env file."
+                "error": "LLM client not configured. Please set GROQ_API_KEY in Streamlit secrets or .env file."
             }
         
         try:

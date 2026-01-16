@@ -1,4 +1,7 @@
-streamlit>=1.29.0
-groq>=0.4.0
+# AI Assist Toolkit for CRM & Consulting Workflows
+# Streamlit Cloud Dependencies
+
+streamlit>=1.28.0
 pandas>=2.0.0
+groq>=0.4.0
 python-dotenv>=1.0.0
