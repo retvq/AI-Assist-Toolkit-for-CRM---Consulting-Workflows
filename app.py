@@ -308,6 +308,21 @@ st.markdown("""
         color: #666 !important;
     }
     
+    /* File uploader button */
+    [data-testid="stFileUploader"] button,
+    [data-testid="stFileUploaderDropzone"] button {
+        background-color: rgba(0, 131, 143, 0.1) !important;
+        color: #00838f !important;
+        border: 1px solid rgba(0, 131, 143, 0.3) !important;
+        border-radius: 8px !important;
+    }
+    
+    [data-testid="stFileUploader"] button:hover,
+    [data-testid="stFileUploaderDropzone"] button:hover {
+        background-color: rgba(0, 131, 143, 0.2) !important;
+        border-color: #00838f !important;
+    }
+    
     /* Expander styling - light theme */
     .streamlit-expanderHeader,
     [data-testid="stExpander"] summary {
@@ -369,9 +384,22 @@ st.markdown("""
         background: rgba(0, 131, 143, 0.02);
     }
     
-    /* Spinner color */
+    /* Spinner styling */
     .stSpinner > div {
         border-top-color: #00838f !important;
+    }
+    
+    .stSpinner,
+    .stSpinner > div,
+    [data-testid="stSpinner"],
+    [data-testid="stSpinner"] > div {
+        color: #1a1a1a !important;
+    }
+    
+    /* Spinner text */
+    .stSpinner > div > span,
+    [data-testid="stSpinner"] span {
+        color: #1a1a1a !important;
     }
     
     /* Download button */
@@ -443,6 +471,35 @@ st.markdown("""
     [data-testid="stSidebar"] .stRadio label[data-checked="true"] {
         background: rgba(0, 131, 143, 0.12) !important;
         border-color: #00838f !important;
+    }
+    
+    /* Streamlit header toolbar - light theme */
+    [data-testid="stHeader"],
+    header[data-testid="stHeader"] {
+        background-color: #f4f6f8 !important;
+        border-bottom: 1px solid rgba(0, 131, 143, 0.1);
+    }
+    
+    /* Toolbar buttons */
+    [data-testid="stHeader"] button,
+    [data-testid="stToolbar"] button {
+        color: #00838f !important;
+    }
+    
+    [data-testid="stToolbar"] {
+        background-color: transparent !important;
+    }
+    
+    /* Deploy button and menu */
+    [data-testid="stStatusWidget"],
+    [data-testid="stStatusWidget"] button {
+        color: #00838f !important;
+        background-color: transparent !important;
+    }
+    
+    /* Hamburger menu icon */
+    [data-testid="stSidebarCollapsedControl"] button {
+        color: #00838f !important;
     }
 </style>
 """, unsafe_allow_html=True)
