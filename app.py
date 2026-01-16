@@ -497,9 +497,32 @@ st.markdown("""
         background-color: transparent !important;
     }
     
-    /* Hamburger menu icon */
-    [data-testid="stSidebarCollapsedControl"] button {
+    /* Hamburger menu icon / sidebar toggle */
+    [data-testid="stSidebarCollapsedControl"] button,
+    [data-testid="stSidebarCollapseButton"] button,
+    [data-testid="collapsedControl"] button,
+    button[kind="header"],
+    [data-testid="stSidebar"] button[kind="header"] {
         color: #00838f !important;
+        background-color: rgba(0, 131, 143, 0.05) !important;
+    }
+    
+    [data-testid="stSidebarCollapsedControl"] button:hover,
+    [data-testid="stSidebarCollapseButton"] button:hover {
+        background-color: rgba(0, 131, 143, 0.15) !important;
+    }
+    
+    /* Sidebar collapse button (X button) */
+    [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"],
+    [data-testid="stSidebar"] button[aria-label="Close sidebar"] {
+        color: #00838f !important;
+    }
+    
+    /* All header area buttons */
+    header button,
+    header button svg {
+        color: #00838f !important;
+        fill: #00838f !important;
     }
 </style>
 """, unsafe_allow_html=True)
