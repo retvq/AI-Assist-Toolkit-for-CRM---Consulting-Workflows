@@ -814,6 +814,9 @@ def render_sidebar():
         <div style="text-align: center; color: #888; font-size: 0.75rem; padding-top: 1rem;">
             <p style="margin: 0;">Session-only data</p>
             <p style="margin: 0;">No data stored</p>
+            <p style="margin-top: 0.75rem;">
+                <a href="https://github.com/retvq/AI-Assist-Toolkit-for-CRM---Consulting-Workflows" target="_blank" style="color: #00838f; text-decoration: none; font-weight: 500;">GitHub</a>
+            </p>
         </div>
         """, unsafe_allow_html=True)
     
