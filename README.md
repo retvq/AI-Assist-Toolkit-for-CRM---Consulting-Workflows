@@ -1,7 +1,7 @@
 # AI Assist Toolkit for CRM & Consulting Workflows
 
 A demo-grade, production-aligned AI assistant that supports consultants across three CRM-centric workflows.
-
+Live at: https://ai-assist-toolkit-for-crm.streamlit.app/
 ## 🎯 Features
 
 ### Module 1: Lead/Opportunity Intelligence
@@ -103,3 +103,4 @@ The `sample_data/` folder contains realistic test data:
 ## 📝 License
 
 Demo project - for evaluation purposes.
+
