@@ -497,54 +497,30 @@ st.markdown("""
         background-color: transparent !important;
     }
     
-    /* Hamburger menu icon / sidebar toggle - ALWAYS VISIBLE */
-    /* Force the collapsed control to always show */
-    [data-testid="stSidebarCollapsedControl"],
-    [data-testid="collapsedControl"],
-    div[data-testid="stSidebarCollapsedControl"],
-    section[data-testid="stSidebarCollapsedControl"] {
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: flex !important;
-        position: fixed !important;
-        top: 0.75rem !important;
-        left: 0.75rem !important;
-        z-index: 999999 !important;
-        pointer-events: auto !important;
-        transform: none !important;
-        transition: none !important;
-    }
-    
-    /* Style the button inside */
+    /* Hamburger menu icon / sidebar toggle - ALWAYS VISIBLE for mobile */
     [data-testid="stSidebarCollapsedControl"] button,
     [data-testid="stSidebarCollapseButton"] button,
     [data-testid="collapsedControl"] button,
     button[kind="header"],
-    [data-testid="stSidebar"] button[kind="header"],
-    [data-testid="stSidebarNavCollapseButton"] {
+    [data-testid="stSidebar"] button[kind="header"] {
         color: #1a365d !important;
         background-color: #e2e8f0 !important;
-        border: 2px solid #94a3b8 !important;
+        border: 1px solid #cbd5e0 !important;
         border-radius: 8px !important;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        min-width: 40px !important;
-        min-height: 40px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
     }
     
     [data-testid="stSidebarCollapsedControl"] button:hover,
     [data-testid="stSidebarCollapseButton"] button:hover {
         background-color: #cbd5e0 !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
     }
     
-    /* Sidebar collapse button (X button) inside sidebar */
+    /* Sidebar collapse button (X button) */
     [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"],
     [data-testid="stSidebar"] button[aria-label="Close sidebar"] {
         color: #1a365d !important;
         background-color: #e2e8f0 !important;
-        border: 2px solid #94a3b8 !important;
     }
     
     /* All header area buttons */
